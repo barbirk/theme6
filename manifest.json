@@ -1,0 +1,22 @@
+{
+  "name": "Arts et Math",
+  "short_name": "Arts et Math",
+  "description": "Application interactive pour apprendre les mathématiques du Thème 6.",
+  "start_url": "/theme6/",
+  "display": "standalone",
+  "background_color": "#FFF7ED",
+  "theme_color": "#7C3AED",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

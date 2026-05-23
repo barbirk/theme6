@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Arts et Math — Thème 6</title>
+  <meta name="description" content="Application interactive pour apprendre les mathématiques du Thème 6.">
+  <meta name="theme-color" content="#7c3aed">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Arts et Math">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg-particles" id="bg-particles" aria-hidden="true"></div>
+  <div class="app-container">
+
+    <header class="app-header" id="app-header">
+      <div class="header-brand" id="btn-home" role="button" tabindex="0" aria-label="Accueil">
+        <span class="header-logo" aria-hidden="true">🎨</span>
+        <span class="header-title" data-i18n="app.title">Arts et Math</span>
+      </div>
+      <div class="header-controls">
+        <div class="xp-pill" id="xp-display">
+          <span aria-hidden="true">⭐</span>
+          <span id="xp-total">0</span>
+        </div>
+        <button class="ctrl-btn" id="btn-lang" aria-label="Changer de langue">FR</button>
+        <button class="ctrl-btn" id="btn-theme" aria-label="Changer de thème">☀️</button>
+      </div>
+    </header>
+
+    <main class="views-container" id="app-view">
+
+      <!-- HOME -->
+      <section id="view-home" class="view active">
+        <div class="home-hero">
+          <div class="hero-content">
+            <h1 class="hero-title" data-i18n="home.title">Arts<br><span class="hero-accent">et Math</span></h1>
+            <p class="hero-subtitle" data-i18n="home.subtitle">Explore, pratique et maîtrise les maths !</p>
+          </div>
+          <div class="hero-mascot" aria-hidden="true">🎨</div>
+        </div>
+        <div class="nav-grid" role="navigation">
+          <button class="nav-card card-purple" data-view="lessons" id="nav-lessons">
+            <div class="nav-card-icon" aria-hidden="true">📚</div>
+            <div class="nav-card-body">
+              <h2 class="nav-card-title" data-i18n="home.lessons">Leçons</h2>
+              <p class="nav-card-desc" data-i18n="home.lessons.desc">Explore les 6 sections</p>
+              <div class="progress-bar"><div class="progress-fill" id="prog-lessons" style="width:0%"></div></div>
+            </div>
+            <span class="nav-card-badge" id="badge-lessons">0/6</span>
+          </button>
+          <button class="nav-card card-cyan" data-view="quiz" id="nav-quiz">
+            <div class="nav-card-icon" aria-hidden="true">🎯</div>
+            <div class="nav-card-body">
+              <h2 class="nav-card-title" data-i18n="home.quiz">Quiz</h2>
+              <p class="nav-card-desc" data-i18n="home.quiz.desc">Teste tes connaissances</p>
+              <div class="progress-bar"><div class="progress-fill" id="prog-quiz" style="width:0%"></div></div>
+            </div>
+            <span class="nav-card-badge" id="badge-quiz">0/7</span>
+          </button>
+          <button class="nav-card card-pink" data-view="games" id="nav-games">
+            <div class="nav-card-icon" aria-hidden="true">🎮</div>
+            <div class="nav-card-body">
+              <h2 class="nav-card-title" data-i18n="home.games">Mini-Jeux</h2>
+              <p class="nav-card-desc" data-i18n="home.games.desc">Joue et apprends !</p>
+              <div class="progress-bar"><div class="progress-fill" id="prog-games" style="width:0%"></div></div>
+            </div>
+            <span class="nav-card-badge" id="badge-games">0/8</span>
+          </button>
+          <button class="nav-card card-amber" data-view="formulas" id="nav-formulas">
+            <div class="nav-card-icon" aria-hidden="true">📐</div>
+            <div class="nav-card-body">
+              <h2 class="nav-card-title" data-i18n="home.formulas">Formules</h2>
+              <p class="nav-card-desc" data-i18n="home.formulas.desc">Aide-mémoire rapide</p>
+            </div>
+          </button>
+          <button class="nav-card card-emerald" data-view="progress" id="nav-progress">
+            <div class="nav-card-icon" aria-hidden="true">🏆</div>
+            <div class="nav-card-body">
+              <h2 class="nav-card-title" data-i18n="home.progress">Progrès</h2>
+              <p class="nav-card-desc" data-i18n="home.progress.desc">Tes accomplissements</p>
+            </div>
+          </button>
+        </div>
+        <div class="mascot-section">
+          <div class="mascot-bubble" id="mascot-msg" aria-live="polite" data-i18n="mascot.welcome">
+            Salut ! Clique sur une section pour commencer ! 🚀
+          </div>
+        </div>
+      </section>
+
+      <!-- LESSONS LIST -->
+      <section id="view-lessons" class="view hidden">
+        <div class="screen-header">
+          <button class="back-btn" data-back aria-label="Retour">←</button>
+          <h1 class="screen-title" data-i18n="lessons.title">📚 Leçons</h1>
+        </div>
+        <div class="list-grid" id="lessons-list"></div>
+      </section>
+
+      <!-- LESSON DETAIL -->
+      <section id="view-lesson-detail" class="view hidden">
+        <div class="screen-header">
+          <button class="back-btn" data-back aria-label="Retour">←</button>
+          <h1 class="screen-title" id="lesson-title"></h1>
+          <span class="section-badge" id="lesson-section-badge"></span>
+        </div>
+        <div class="lesson-content" id="lesson-content"></div>
+        <div class="lesson-footer">
+          <button class="btn-primary btn-large" id="btn-lesson-complete" data-i18n="lesson.complete">✅ Leçon terminée !</button>
+        </div>
+      </section>
+
+      <!-- QUIZ LIST -->
+      <section id="view-quiz" class="view hidden">
+        <div class="screen-header">
+          <button class="back-btn" data-back aria-label="Retour">←</button>
+          <h1 class="screen-title" data-i18n="quiz.title">🎯 Quiz</h1>
+        </div>
+        <div class="list-grid" id="quiz-list"></div>
+      </section>
+
+      <!-- ACTIVE QUIZ -->
+      <section id="view-quiz-active" class="view hidden">
+        <div class="quiz-topbar">
+          <button class="ctrl-btn" id="btn-quit-quiz" aria-label="Quitter">✕</button>
+          <div class="quiz-progress-wrap">
+            <div class="progress-bar quiz-bar">
+              <div class="progress-fill" id="quiz-progress" style="width:0%"></div>
+            </div>
+            <span class="quiz-counter" id="quiz-counter">0/0</span>
+          </div>
+          <div class="lives-display" id="quiz-lives" aria-label="Vies">❤️❤️❤️</div>
+        </div>
+        <div class="quiz-arena" id="quiz-content"></div>
+      </section>
+
+      <!-- GAMES LIST -->
+      <section id="view-games" class="view hidden">
+        <div class="screen-header">
+          <button class="back-btn" data-back aria-label="Retour">←</button>
+          <h1 class="screen-title" data-i18n="games.title">🎮 Mini-Jeux</h1>
+        </div>
+        <div class="games-grid" id="games-list"></div>
+      </section>
+
+      <!-- ACTIVE GAME -->
+      <section id="view-game-active" class="view hidden">
+        <div class="screen-header game-header">
+          <button class="ctrl-btn" id="btn-quit-game" aria-label="Quitter">✕</button>
+          <h1 class="screen-title" id="game-title"></h1>
+          <div class="game-score-badge" id="game-score-badge">0 pts</div>
+        </div>
+        <div class="game-arena" id="game-content"></div>
+      </section>
+
+      <!-- FORMULAS -->
+      <section id="view-formulas" class="view hidden">
+        <div class="screen-header">
+          <button class="back-btn" data-back aria-label="Retour">←</button>
+          <h1 class="screen-title" data-i18n="formulas.title">📐 Formules</h1>
+        </div>
+        <div class="formulas-container" id="formulas-content"></div>
+      </section>
+
+      <!-- PROGRESS -->
+      <section id="view-progress" class="view hidden">
+        <div class="screen-header">
+          <button class="back-btn" data-back aria-label="Retour">←</button>
+          <h1 class="screen-title" data-i18n="progress.title">🏆 Progrès</h1>
+        </div>
+        <div class="progress-dashboard" id="progress-content"></div>
+      </section>
+
+      <!-- RESULTS -->
+      <section id="view-results" class="view hidden">
+        <div class="results-screen">
+          <div class="results-emoji" id="results-emoji" aria-hidden="true">🎉</div>
+          <h1 class="results-title" id="results-title"></h1>
+          <div class="score-ring">
+            <svg class="score-svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="score-track" cx="60" cy="60" r="52"/>
+              <circle class="score-fill" cx="60" cy="60" r="52" id="score-circle"/>
+            </svg>
+            <div class="score-center">
+              <span class="score-number" id="results-score">0</span>
+              <span class="score-denom">/<span id="results-total">10</span></span>
+            </div>
+          </div>
+          <p class="results-xp" id="results-xp-msg"></p>
+          <div class="results-actions">
+            <button class="btn-outline" id="btn-results-home" data-i18n="results.home">🏠 Accueil</button>
+            <button class="btn-primary" id="btn-results-retry" data-i18n="results.retry">🔄 Réessayer</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast" aria-live="assertive" aria-atomic="true"></div>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
