@@ -25,15 +25,15 @@ const APP_DATA = {
           <p>On isole l'inconnue en utilisant les opérations inverses.</p>
           <div class="example-box">
             <details><summary>Exemple : Terme manquant</summary>
-            <p>□ + 7 = 15 → □ = 15 − 7 = <strong>8</strong></p>
-            <p>□ × 4 = 28 → □ = 28 ÷ 4 = <strong>7</strong></p>
+            <p><span class="missing-box">?</span> + 7 = 15 → <span class="missing-box">?</span> = 15 − 7 = <strong>8</strong></p>
+            <p><span class="missing-box">?</span> × 4 = 28 → <span class="missing-box">?</span> = 28 ÷ 4 = <strong>7</strong></p>
             </details>
           </div>
           <div class="practice-box">
             <p><strong>Pratique :</strong> Trouve le terme manquant.</p>
-            <p>1) □ + 12 = 25 <input type="number" class="practice-input" data-answer="13"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>2) 8 × □ = 64 <input type="number" class="practice-input" data-answer="8"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>3) □ − 9 = 14 <input type="number" class="practice-input" data-answer="23"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>1) <span class="missing-box">?</span> + 12 = 25 <input type="number" class="practice-input" data-answer="13"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>2) 8 × <span class="missing-box">?</span> = 64 <input type="number" class="practice-input" data-answer="8"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>3) <span class="missing-box">?</span> − 9 = 14 <input type="number" class="practice-input" data-answer="23"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
           </div>
         `,
         en: `
@@ -49,15 +49,15 @@ const APP_DATA = {
           <p>Isolate the unknown using inverse operations.</p>
           <div class="example-box">
             <details><summary>Example: Missing term</summary>
-            <p>□ + 7 = 15 → □ = 15 − 7 = <strong>8</strong></p>
-            <p>□ × 4 = 28 → □ = 28 ÷ 4 = <strong>7</strong></p>
+            <p><span class="missing-box">?</span> + 7 = 15 → <span class="missing-box">?</span> = 15 − 7 = <strong>8</strong></p>
+            <p><span class="missing-box">?</span> × 4 = 28 → <span class="missing-box">?</span> = 28 ÷ 4 = <strong>7</strong></p>
             </details>
           </div>
           <div class="practice-box">
             <p><strong>Practice:</strong> Find the missing term.</p>
-            <p>1) □ + 12 = 25 <input type="number" class="practice-input" data-answer="13"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>2) 8 × □ = 64 <input type="number" class="practice-input" data-answer="8"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>3) □ − 9 = 14 <input type="number" class="practice-input" data-answer="23"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>1) <span class="missing-box">?</span> + 12 = 25 <input type="number" class="practice-input" data-answer="13"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>2) 8 × <span class="missing-box">?</span> = 64 <input type="number" class="practice-input" data-answer="8"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>3) <span class="missing-box">?</span> − 9 = 14 <input type="number" class="practice-input" data-answer="23"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
           </div>
         `
       }
@@ -338,11 +338,11 @@ const APP_DATA = {
       title: { fr: 'Expressions équivalentes', en: 'Equivalent Expressions' },
       questions: [
         { q: { fr: 'Quelle expression est équivalente à 4x + 3x ?', en: 'Which expression is equivalent to 4x + 3x?' }, options: { fr: ['7x','7x²','12x','x⁷'], en: ['7x','7x²','12x','x⁷'] }, correct: 0 },
-        { q: { fr: 'Trouve le terme manquant : □ + 8 = 17', en: 'Find the missing term: □ + 8 = 17' }, options: { fr: ['7','8','9','10'], en: ['7','8','9','10'] }, correct: 2 },
-        { q: { fr: 'Trouve le terme manquant : 6 × □ = 42', en: 'Find the missing term: 6 × □ = 42' }, options: { fr: ['6','7','8','9'], en: ['6','7','8','9'] }, correct: 1 },
+        { q: { fr: 'Trouve le terme manquant : <span class="missing-box">?</span> + 8 = 17', en: 'Find the missing term: <span class="missing-box">?</span> + 8 = 17' }, options: { fr: ['7','8','9','10'], en: ['7','8','9','10'] }, correct: 2 },
+        { q: { fr: 'Trouve le terme manquant : 6 × <span class="missing-box">?</span> = 42', en: 'Find the missing term: 6 × <span class="missing-box">?</span> = 42' }, options: { fr: ['6','7','8','9'], en: ['6','7','8','9'] }, correct: 1 },
         { q: { fr: 'Quelle expression est équivalente à 5 + 2y − 1 ?', en: 'Which expression is equivalent to 5 + 2y − 1?' }, options: { fr: ['2y + 4','6y','4y','2y + 6'], en: ['2y + 4','6y','4y','2y + 6'] }, correct: 0 },
-        { q: { fr: 'Trouve le terme manquant : □ − 15 = 23', en: 'Find the missing term: □ − 15 = 23' }, type: 'fill', correct: '38' },
-        { q: { fr: 'Trouve le terme manquant : 72 ÷ □ = 9', en: 'Find the missing term: 72 ÷ □ = 9' }, type: 'fill', correct: '8' },
+        { q: { fr: 'Trouve le terme manquant : <span class="missing-box">?</span> − 15 = 23', en: 'Find the missing term: <span class="missing-box">?</span> − 15 = 23' }, type: 'fill', correct: '38' },
+        { q: { fr: 'Trouve le terme manquant : 72 ÷ <span class="missing-box">?</span> = 9', en: 'Find the missing term: 72 ÷ <span class="missing-box">?</span> = 9' }, type: 'fill', correct: '8' },
         { q: { fr: 'Vrai ou faux : 3a + 2 et 2 + 3a sont équivalentes.', en: 'True or false: 3a + 2 and 2 + 3a are equivalent.' }, options: { fr: ['Vrai','Faux'], en: ['True','False'] }, correct: 0 },
         { q: { fr: 'Quelle expression est équivalente à 3(x + 2) ?', en: 'Which expression is equivalent to 3(x + 2)?' }, options: { fr: ['3x + 2','3x + 6','x + 6','3x + 5'], en: ['3x + 2','3x + 6','x + 6','3x + 5'] }, correct: 1 }
       ]
@@ -419,7 +419,7 @@ const APP_DATA = {
       section: 'REV',
       title: { fr: 'Révision complète', en: 'Full Review' },
       questions: [
-        { q: { fr: 'Trouve le terme manquant : □ × 9 = 81', en: 'Find the missing term: □ × 9 = 81' }, options: { fr: ['8','9','10','7'], en: ['8','9','10','7'] }, correct: 1 },
+        { q: { fr: 'Trouve le terme manquant : <span class="missing-box">?</span> × 9 = 81', en: 'Find the missing term: <span class="missing-box">?</span> × 9 = 81' }, options: { fr: ['8','9','10','7'], en: ['8','9','10','7'] }, correct: 1 },
         { q: { fr: 'Décompose 120 en facteurs premiers.', en: 'Decompose 120 into prime factors.' }, options: { fr: ['2×2×2×3×5','2×3×4×5','2×60','3×4×10'], en: ['2×2×2×3×5','2×3×4×5','2×60','3×4×10'] }, correct: 0 },
         { q: { fr: 'Calcule 6 × ⅔.', en: 'Calculate 6 × ⅔.' }, options: { fr: ['12/3 = 4','18/2','8/3','3'], en: ['12/3 = 4','18/2','8/3','3'] }, correct: 0 },
         { q: { fr: 'Calcule 3,7 × 100.', en: 'Calculate 3.7 × 100.' }, type: 'fill', correct: '370' },
@@ -447,13 +447,13 @@ const APP_DATA = {
   formulas: [
     {
       title: { fr: 'Terme manquant', en: 'Missing term' },
-      formula: '□ + a = b → □ = b − a',
-      example: { fr: '□ + 7 = 15 → □ = 8', en: '□ + 7 = 15 → □ = 8' }
+      formula: '<span class="missing-box">?</span> + a = b → <span class="missing-box">?</span> = b − a',
+      example: { fr: '<span class="missing-box">?</span> + 7 = 15 → <span class="missing-box">?</span> = 8', en: '<span class="missing-box">?</span> + 7 = 15 → <span class="missing-box">?</span> = 8' }
     },
     {
       title: { fr: 'Terme manquant (multiplication)', en: 'Missing term (multiplication)' },
-      formula: '□ × a = b → □ = b ÷ a',
-      example: { fr: '□ × 4 = 28 → □ = 7', en: '□ × 4 = 28 → □ = 7' }
+      formula: '<span class="missing-box">?</span> × a = b → <span class="missing-box">?</span> = b ÷ a',
+      example: { fr: '<span class="missing-box">?</span> × 4 = 28 → <span class="missing-box">?</span> = 7', en: '<span class="missing-box">?</span> × 4 = 28 → <span class="missing-box">?</span> = 7' }
     },
     {
       title: { fr: 'Nombre × fraction', en: 'Number × fraction' },
