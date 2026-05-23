@@ -440,6 +440,9 @@ body {
   font-size: 1rem;
   width: 120px;
 }
+.practice-input-wide {
+  width: 260px;
+}
 .practice-input::placeholder {
   color: var(--text-muted);
   opacity: 1;

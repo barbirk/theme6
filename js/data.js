@@ -83,10 +83,10 @@ const APP_DATA = {
             </details>
           </div>
           <div class="practice-box">
-            <p><strong>Pratique :</strong> Décompose en facteurs premiers.</p>
-            <p>1) 36 = <input type="text" class="practice-input" data-answer="2x2x3x3" placeholder="2×2×3×3"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>2) 48 = <input type="text" class="practice-input" data-answer="2x2x2x2x3" placeholder="2×2×2×2×3"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>3) 100 = <input type="text" class="practice-input" data-answer="2x2x5x5" placeholder="2×2×5×5"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p><strong>Pratique :</strong> Décompose étape par étape.</p>
+            <p>1) 36 = <input type="text" class="practice-input practice-input-wide" data-validate="factor" data-target="36" placeholder="36 = ... = ... = ..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>2) 48 = <input type="text" class="practice-input practice-input-wide" data-validate="factor" data-target="48" placeholder="48 = ... = ... = ..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>3) 100 = <input type="text" class="practice-input practice-input-wide" data-validate="factor" data-target="100" placeholder="100 = ... = ... = ..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
           </div>
         `,
         en: `
@@ -103,10 +103,10 @@ const APP_DATA = {
             </details>
           </div>
           <div class="practice-box">
-            <p><strong>Practice:</strong> Decompose into prime factors.</p>
-            <p>1) 36 = <input type="text" class="practice-input" data-answer="2x2x3x3" placeholder="2×2×3×3"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>2) 48 = <input type="text" class="practice-input" data-answer="2x2x2x2x3" placeholder="2×2×2×2×3"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>3) 100 = <input type="text" class="practice-input" data-answer="2x2x5x5" placeholder="2×2×5×5"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p><strong>Practice:</strong> Decompose step by step.</p>
+            <p>1) 36 = <input type="text" class="practice-input practice-input-wide" data-validate="factor" data-target="36" placeholder="36 = ... = ... = ..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>2) 48 = <input type="text" class="practice-input practice-input-wide" data-validate="factor" data-target="48" placeholder="48 = ... = ... = ..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>3) 100 = <input type="text" class="practice-input practice-input-wide" data-validate="factor" data-target="100" placeholder="100 = ... = ... = ..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
           </div>
         `
       }

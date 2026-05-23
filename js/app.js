@@ -201,10 +201,17 @@ const App = {
       btn.addEventListener('click', () => {
         const input = btn.previousElementSibling;
         const feedback = btn.nextElementSibling;
-        const expected = input.getAttribute('data-answer');
-        const given = input.value.trim().toLowerCase().replace(/,/g, '.');
-        const normExpected = expected.toLowerCase().replace(/,/g, '.');
-        const correct = given === normExpected;
+        const validateType = input.getAttribute('data-validate');
+        let correct = false;
+        if (validateType === 'factor') {
+          const target = parseInt(input.getAttribute('data-target'), 10);
+          correct = this.validateFactorization(input.value, target);
+        } else {
+          const expected = input.getAttribute('data-answer');
+          const given = input.value.trim().toLowerCase().replace(/,/g, '.');
+          const normExpected = expected.toLowerCase().replace(/,/g, '.');
+          correct = given === normExpected;
+        }
         feedback.textContent = I18n.t(correct ? 'practice.correct' : 'practice.wrong');
         feedback.className = 'practice-feedback ' + (correct ? 'correct' : 'wrong');
       });
@@ -225,6 +232,26 @@ const App = {
   },
 
   bindLessonComplete() {},
+
+  validateFactorization(input, target) {
+    if (!input || !target) return false;
+    const parts = input.split(/=+/);
+    const lastPart = parts[parts.length - 1].trim();
+    const nums = (lastPart.match(/\d+/g) || []).map(n => parseInt(n, 10));
+    if (nums.length === 0) return false;
+    const allPrime = nums.every(n => this.isPrime(n) && n > 1);
+    if (!allPrime) return false;
+    const product = nums.reduce((a, b) => a * b, 1);
+    return product === target;
+  },
+
+  isPrime(n) {
+    if (n < 2) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i === 0) return false;
+    }
+    return true;
+  },
 
   /* ---- Quiz ---- */
   renderQuizList() {
