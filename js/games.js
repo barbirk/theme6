@@ -279,13 +279,14 @@ const Games = {
       arena.appendChild(info);
 
       const draw = () => {
-        ctx.fillStyle = getComputedStyle(canvas).backgroundColor || '#FFF7ED';
+        const bg = getComputedStyle(canvas).backgroundColor;
+        ctx.fillStyle = bg && bg !== 'rgba(0, 0, 0, 0)' ? bg : (document.documentElement.getAttribute('data-theme') === 'dark' ? '#0F172A' : '#FFF7ED');
         ctx.fillRect(0,0,canvas.width,canvas.height);
         for (let i = 0; i < den; i++) {
           const c = i % cols, r = Math.floor(i / cols);
-          ctx.fillStyle = filled[i] ? '#7C3AED' : '#E5E7EB';
+          ctx.fillStyle = filled[i] ? '#7C3AED' : (document.documentElement.getAttribute('data-theme') === 'dark' ? '#334155' : '#E5E7EB');
           ctx.fillRect(c*cellW+2, r*cellH+2, cellW-4, cellH-4);
-          ctx.strokeStyle = '#9CA3AF';
+          ctx.strokeStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? '#475569' : '#9CA3AF';
           ctx.strokeRect(c*cellW+2, r*cellH+2, cellW-4, cellH-4);
         }
       };
@@ -464,9 +465,10 @@ const Games = {
       arena.appendChild(controls);
 
       const draw = () => {
-        ctx.fillStyle = getComputedStyle(canvas).backgroundColor || '#FFF7ED';
+        const bg2 = getComputedStyle(canvas).backgroundColor;
+        ctx.fillStyle = bg2 && bg2 !== 'rgba(0, 0, 0, 0)' ? bg2 : (document.documentElement.getAttribute('data-theme') === 'dark' ? '#0F172A' : '#FFF7ED');
         ctx.fillRect(0,0,canvas.width,canvas.height);
-        ctx.strokeStyle = '#CBD5E1';
+        ctx.strokeStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? '#475569' : '#CBD5E1';
         for (let i = 0; i <= 12; i++) {
           ctx.beginPath(); ctx.moveTo(i*gridSize,0); ctx.lineTo(i*gridSize,canvas.height); ctx.stroke();
           ctx.beginPath(); ctx.moveTo(0,i*gridSize); ctx.lineTo(canvas.width,i*gridSize); ctx.stroke();
