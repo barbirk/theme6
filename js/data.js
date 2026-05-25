@@ -131,9 +131,9 @@ const APP_DATA = {
           <p>a × <sup>b</sup>⁄<sub>c</sub> = <sup>a×b</sup>⁄<sub>c</sub></p>
           <div class="practice-box">
             <p><strong>Pratique :</strong> Calcule.</p>
-            <p>1) 4 × ⅖ = <input type="text" class="practice-input" data-answer="8/5" placeholder="8/5"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>2) 6 × ¾ = <input type="text" class="practice-input" data-answer="18/4" placeholder="18/4"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>3) 5 × ⅓ = <input type="text" class="practice-input" data-answer="5/3" placeholder="5/3"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>1) 4 × ⅖ = <input type="text" class="practice-input" data-answer="8/5" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>2) 6 × ¾ = <input type="text" class="practice-input" data-answer="18/4" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>3) 5 × ⅓ = <input type="text" class="practice-input" data-answer="5/3" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
           </div>
         `,
         en: `
@@ -149,9 +149,9 @@ const APP_DATA = {
           <p>a × <sup>b</sup>⁄<sub>c</sub> = <sup>a×b</sup>⁄<sub>c</sub></p>
           <div class="practice-box">
             <p><strong>Practice:</strong> Calculate.</p>
-            <p>1) 4 × ⅖ = <input type="text" class="practice-input" data-answer="8/5" placeholder="8/5"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>2) 6 × ¾ = <input type="text" class="practice-input" data-answer="18/4" placeholder="18/4"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>3) 5 × ⅓ = <input type="text" class="practice-input" data-answer="5/3" placeholder="5/3"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>1) 4 × ⅖ = <input type="text" class="practice-input" data-answer="8/5" placeholder="Ta réponse..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>2) 6 × ¾ = <input type="text" class="practice-input" data-answer="18/4" placeholder="Ta réponse..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>3) 5 × ⅓ = <input type="text" class="practice-input" data-answer="5/3" placeholder="Ta réponse..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
           </div>
         `
       }
@@ -184,9 +184,9 @@ const APP_DATA = {
           </div>
           <div class="practice-box">
             <p><strong>Pratique :</strong></p>
-            <p>1) 5,67 × 100 = <input type="text" class="practice-input" data-answer="567" placeholder="567"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>2) 0,8 × 0,3 = <input type="text" class="practice-input" data-answer="0.24" placeholder="0,24"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>3) 1,25 × 0,4 = <input type="text" class="practice-input" data-answer="0.5" placeholder="0,5"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>1) 5,67 × 100 = <input type="text" class="practice-input" data-answer="567" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>2) 0,8 × 0,3 = <input type="text" class="practice-input" data-answer="0.24" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>3) 1,25 × 0,4 = <input type="text" class="practice-input" data-answer="0.5" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
           </div>
         `,
         en: `
@@ -210,9 +210,9 @@ const APP_DATA = {
           </div>
           <div class="practice-box">
             <p><strong>Practice:</strong></p>
-            <p>1) 5.67 × 100 = <input type="text" class="practice-input" data-answer="567" placeholder="567"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>2) 0.8 × 0.3 = <input type="text" class="practice-input" data-answer="0.24" placeholder="0.24"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>3) 1.25 × 0.4 = <input type="text" class="practice-input" data-answer="0.5" placeholder="0.5"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>1) 5.67 × 100 = <input type="text" class="practice-input" data-answer="567" placeholder="Ta réponse..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>2) 0.8 × 0.3 = <input type="text" class="practice-input" data-answer="0.24" placeholder="Your answer..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>3) 1.25 × 0.4 = <input type="text" class="practice-input" data-answer="0.5" placeholder="Your answer..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
           </div>
         `
       }
@@ -239,8 +239,8 @@ const APP_DATA = {
           <p>Un <strong>dallage</strong> (pavage) est un motif qui se répète pour couvrir tout un plan.</p>
           <div class="practice-box">
             <p><strong>Pratique :</strong></p>
-            <p>1) Un carré se déplace de 4 cases à gauche et 1 case vers le bas. Quelle est la translation ? <input type="text" class="practice-input" data-answer="(-4,-1)" placeholder="(-4,-1)"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>2) Vrai ou Faux : une réflexion conserve les distances. <input type="text" class="practice-input" data-answer="vrai" placeholder="vrai"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>1) Un carré se déplace de 4 cases à gauche et 1 case vers le bas. Quelle est la translation ? <input type="text" class="practice-input" data-answer="(-4,-1)" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>2) Vrai ou Faux : une réflexion conserve les distances. <input type="text" class="practice-input" data-answer="vrai" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
           </div>
         `,
         en: `
@@ -258,8 +258,8 @@ const APP_DATA = {
           <p>A <strong>tiling</strong> is a pattern that repeats to cover an entire plane.</p>
           <div class="practice-box">
             <p><strong>Practice:</strong></p>
-            <p>1) A square moves 4 squares left and 1 square down. What is the translation? <input type="text" class="practice-input" data-answer="(-4,-1)" placeholder="(-4,-1)"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>2) True or False: a reflection preserves distances. <input type="text" class="practice-input" data-answer="true" placeholder="true"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>1) A square moves 4 squares left and 1 square down. What is the translation? <input type="text" class="practice-input" data-answer="(-4,-1)" placeholder="Ta réponse..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>2) True or False: a reflection preserves distances. <input type="text" class="practice-input" data-answer="true" placeholder="Your answer..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
           </div>
         `
       }
@@ -294,9 +294,9 @@ const APP_DATA = {
           <p>Plus on répète l'expérience, plus le résultat expérimental se rapproche du théorique.</p>
           <div class="practice-box">
             <p><strong>Pratique :</strong> Une urne contient 3 billes rouges et 7 billes bleues.</p>
-            <p>1) P(rouge) en fraction : <input type="text" class="practice-input" data-answer="3/10" placeholder="3/10"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>2) P(rouge) en décimale : <input type="text" class="practice-input" data-answer="0.3" placeholder="0,3"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
-            <p>3) P(rouge) en % : <input type="text" class="practice-input" data-answer="30%" placeholder="30%"><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>1) P(rouge) en fraction : <input type="text" class="practice-input" data-answer="3/10" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>2) P(rouge) en décimale : <input type="text" class="practice-input" data-answer="0.3" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
+            <p>3) P(rouge) en % : <input type="text" class="practice-input" data-answer="30%" placeholder="Ta réponse..."><button class="practice-check">Vérifier</button><span class="practice-feedback"></span></p>
           </div>
         `,
         en: `
@@ -322,9 +322,9 @@ const APP_DATA = {
           <p>The more you repeat, the closer experimental gets to theoretical.</p>
           <div class="practice-box">
             <p><strong>Practice:</strong> An urn has 3 red marbles and 7 blue marbles.</p>
-            <p>1) P(red) as fraction: <input type="text" class="practice-input" data-answer="3/10" placeholder="3/10"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>2) P(red) as decimal: <input type="text" class="practice-input" data-answer="0.3" placeholder="0.3"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
-            <p>3) P(red) as %: <input type="text" class="practice-input" data-answer="30%" placeholder="30%"><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>1) P(red) as fraction: <input type="text" class="practice-input" data-answer="3/10" placeholder="Ta réponse..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>2) P(red) as decimal: <input type="text" class="practice-input" data-answer="0.3" placeholder="Your answer..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
+            <p>3) P(red) as %: <input type="text" class="practice-input" data-answer="30%" placeholder="Ta réponse..."><button class="practice-check">Check</button><span class="practice-feedback"></span></p>
           </div>
         `
       }
