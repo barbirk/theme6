@@ -16,7 +16,17 @@ const Games = {
     this.score = 0;
     this.active = key;
     const fn = this.engines[key];
-    if (fn) fn.call(this, arena);
+    if (!fn) {
+      console.error('Game engine not found:', key);
+      arena.innerHTML = '<p style="text-align:center;color:var(--text-muted);">Game not found</p>';
+      return;
+    }
+    try {
+      fn.call(this, arena);
+    } catch (e) {
+      console.error('Game engine error:', e);
+      arena.innerHTML = '<p style="text-align:center;color:var(--error);">⚠️ Game failed to load. Check console.</p>';
+    }
   },
 
   stop() {
@@ -160,12 +170,6 @@ const Games = {
       wrap.appendChild(endBtn);
     },
 
-    isPrime(n) {
-      if (n < 2) return false;
-      for (let i = 2; i <= Math.sqrt(n); i++) if (n % i === 0) return false;
-      return true;
-    },
-
     /* ---- 3. Missing Number Detective ---- */
     missingNumber(arena) {
       let score = 0, rounds = 0, timeLeft = 60;
@@ -262,8 +266,9 @@ const Games = {
 
       const numerators = [1,2,3,4,5];
       const denominators = [2,3,4,5,6,8];
-      const num = numerators[Math.floor(Math.random()*numerators.length)];
       const den = denominators[Math.floor(Math.random()*denominators.length)];
+      const validNums = numerators.filter(n => n <= den);
+      const num = validNums[Math.floor(Math.random()*validNums.length)];
       const target = num / den;
       let painted = 0;
       const cols = den <= 4 ? den : 8;
@@ -565,5 +570,13 @@ const Games = {
         optsWrap.appendChild(btn);
       });
     }
+  },
+
+  isPrime(n) {
+    if (n < 2) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) if (n % i === 0) return false;
+    return true;
   }
 };
+
+window.Games = Games;
