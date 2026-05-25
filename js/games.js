@@ -447,7 +447,7 @@ const Games = {
       const gridSize = 30;
       const sx = 3, sy = 4;
       const tx = Math.floor(Math.random()*6)+1, ty = Math.floor(Math.random()*4)-2;
-      const targetX = sx + tx, targetY = sy + ty;
+      const targetX = sx + tx, targetY = sy - ty;
       let playerX = sx, playerY = sy;
 
       const info = document.createElement('div');
@@ -478,9 +478,11 @@ const Games = {
           ctx.beginPath(); ctx.moveTo(i*gridSize,0); ctx.lineTo(i*gridSize,canvas.height); ctx.stroke();
           ctx.beginPath(); ctx.moveTo(0,i*gridSize); ctx.lineTo(canvas.width,i*gridSize); ctx.stroke();
         }
-        // Target
-        ctx.fillStyle = 'rgba(16,185,129,.3)';
-        ctx.fillRect(targetX*gridSize, targetY*gridSize, gridSize, gridSize);
+        // Target (only visible when player is on it)
+        if (playerX === targetX && playerY === targetY) {
+          ctx.fillStyle = 'rgba(16,185,129,.3)';
+          ctx.fillRect(targetX*gridSize, targetY*gridSize, gridSize, gridSize);
+        }
         // Player
         ctx.fillStyle = '#7C3AED';
         ctx.fillRect(playerX*gridSize+2, playerY*gridSize+2, gridSize-4, gridSize-4);
