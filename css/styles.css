@@ -707,7 +707,6 @@ body {
 .memory-card.flipped {
   background: var(--bg-elevated);
   color: var(--text-main);
-  transform: rotateY(180deg);
 }
 .memory-card.matched {
   background: var(--success);
